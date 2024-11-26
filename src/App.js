@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Login from './Components/Login/Login';
+import Dashboard from './Components/Dashboard/Dashboard';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import PrivateRoute from './utils/PrivateRoute';
+
+const onLoginSuccess = (data) => {
+  console.log("Login successful:", data);
+  // You can add any additional logic here if needed
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div><Login onLoginSuccess={onLoginSuccess} /></div>,
+  },
+  {
+    path: "/dashboard",
+    element: <div><Dashboard/></div>
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router}/>
     </div>
   );
 }
