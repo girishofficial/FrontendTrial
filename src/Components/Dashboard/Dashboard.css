@@ -4,3 +4,8 @@
     margin-left: 10px;
     gap: 20px;
 }
+
+.logout{
+   position: absolute;
+   right: 35px;
+}

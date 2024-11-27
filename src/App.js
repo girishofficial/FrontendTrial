@@ -11,7 +11,7 @@ import PrivateRoute from './utils/PrivateRoute';
 
 const onLoginSuccess = (data) => {
   console.log("Login successful:", data);
-  // You can add any additional logic here if needed
+
 };
 
 const router = createBrowserRouter([

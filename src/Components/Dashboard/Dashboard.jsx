@@ -185,7 +185,7 @@ function Dashboard() {
         <button onClick={handleCalculateSpecializations} className="btn btn-primary ml-2">
           Recalculate Specializations
         </button>
-        <button onClick={handleLogout} className="btn btn-danger ml-2">
+        <button onClick={handleLogout} className="btn btn-danger ml-4 logout">
           Logout
         </button>
       </div>
